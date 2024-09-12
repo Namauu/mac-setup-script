@@ -55,4 +55,17 @@ else
   echo "Visual Studio Code is already installed."
 fi
 
-echo "All installations completed successfully."
+# Success message
+echo "***************************************"
+echo "*                                     *"
+echo "*         INSTALLATION SUCCESS!       *"
+echo "*                                     *"
+echo "***************************************"
+echo "  \\(^_^)    All tools installed!    \\(^_^)  "
+echo "***************************************"
+echo "*                                     *"
+echo "*    You're all set and ready to go!  *"
+echo "*                                     *"
+echo "***************************************"
+
+exit 0
