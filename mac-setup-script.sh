@@ -43,9 +43,17 @@ else
   echo "NVM is already installed."
 fi
 
-# Install the latest stable version of Node.js and npm using nvm
+# Install Node.js v20 and the latest stable version using nvm
+echo "Installing Node.js v20 via NVM..."
+nvm install 20 || error_exit "Error: Failed to install Node.js v20."
+
 echo "Installing the latest stable version of Node.js via NVM..."
 nvm install node || error_exit "Error: Failed to install Node.js."
+
+# Set the latest version as default
+echo "Setting the latest Node.js version as default..."
+nvm use node || error_exit "Error: Failed to set latest Node.js as default."
+nvm alias default node || error_exit "Error: Failed to set default Node.js alias."
 
 # Install Visual Studio Code
 if ! command_exists code; then
